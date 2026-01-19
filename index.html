@@ -1,80 +1,123 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Taoping Liu — 个人主页</title>
-  <meta name="description" content="陶平柳的个人主页 — 项目、博客与联系" />
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taoping Liu - Homepage</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background-color: #fff;
+        }
+
+        /* 顶部容器：实现左右分栏 */
+        .header-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        /* 左侧文字区域 */
+        .text-info {
+            flex: 2; /* 占据更多空间 */
+        }
+
+        /* 右侧照片区域 */
+        .photo-area {
+            flex: 1; /* 占据较少空间 */
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .profile-photo {
+            width: 100%;
+            max-width: 280px; /* 控制照片最大宽度 */
+            border-radius: 12px; /* 圆角效果，参考截图 */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* 淡淡的阴影 */
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0 0 10px 0;
+            color: #000;
+        }
+
+        .affiliation {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .intro-text {
+            font-size: 1.05em;
+            text-align: justify;
+        }
+
+        .highlight {
+            color: #b54d9a; /* 参考截图中粉紫色的链接颜色 */
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        h2 {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 40px;
+            font-size: 1.8em;
+        }
+
+        /* 手机端适配：改为上下排列 */
+        @media (max-width: 600px) {
+            .header-container {
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+            .photo-area {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="/">陶平柳</a>
-      <nav class="nav">
-        <a href="#about">关于</a>
-        <a href="#projects">项目</a>
-        <a href="#contact">联系</a>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-inner">
-        <img class="avatar" src="assets/avatar-placeholder.png" alt="头像（替换为你的照片）" />
-        <div class="hero-text">
-          <h1>你好，我是 陶平柳</h1>
-          <p class="lead">前端 / 全栈 / 热爱开源。这里展示我的项目、博客与联系方式。</p>
-          <p class="actions">
-            <a class="btn" href="#projects">我的项目</a>
-            <a class="btn btn-outline" href="#contact">联系我</a>
-          </p>
-          <p class="social">
-            <a href="https://github.com/xingyue-333" target="_blank" rel="noopener">GitHub</a> ·
-            <a href="#" target="_blank" rel="noopener">简历</a>
-          </p>
+    <div class="header-container">
+        <div class="text-info">
+            <h1><b>Taoping</b> Liu</h1>
+            <div class="affiliation">你的学校名称 (University of XXX)</div>
+
+            <div class="intro-text">
+                <p>
+                    I am currently a [你的职位, e.g., PhD Student] at the 
+                    <span class="highlight">[你的学院名称]</span>, [学校名字]. 
+                    I obtained my [学位, e.g., Master's degree] from [毕业院校], 
+                    advised by Professor <span class="highlight">[导师名字]</span>.
+                </p>
+
+                <p>
+                    My research interests lie in <b>[研究方向 1]</b> and <b>[研究方向 2]</b>, 
+                    with a particular focus on [具体细分领域]. 
+                    If you are interested in discussing potential collaborations or shared research interests, 
+                    please feel free to contact me at 
+                    <a href="mailto:你的邮箱@example.com" class="highlight">你的邮箱@example.com</a>.
+                </p>
+            </div>
         </div>
-      </div>
-    </section>
 
-    <section id="about" class="container section">
-      <h2>关于我</h2>
-      <p>一句话介绍你自己。可以写职业、擅长技术、当前关注领域等。例如：我是前端工程师，喜欢 React、Vite 与性能优化。</p>
-    </section>
-
-    <section id="projects" class="container section">
-      <h2>项目</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>项目名称 A</h3>
-          <p>项目简述，技术栈和亮点。</p>
-          <p><a href="#" target="_blank" rel="noopener">查看仓库</a></p>
-        </article>
-        <article class="card">
-          <h3>项目名称 B</h3>
-          <p>项目简述，技术栈和亮点。</p>
-          <p><a href="#" target="_blank" rel="noopener">查看仓库</a></p>
-        </article>
-      </div>
-    </section>
-
-    <section id="contact" class="container section">
-      <h2>联系</h2>
-      <p>邮箱：<a href="mailto:you@example.com">you@example.com</a></p>
-      <p>也可以在 <a href="https://github.com/xingyue-333" target="_blank" rel="noopener">GitHub</a> 找到我。</p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <small>© <span id="year"></span> 陶平柳 · 基于 GitHub Pages 托管</small>
+        <div class="photo-area">
+            <img src="你的照片链接" alt="Taoping Liu" class="profile-photo">
+        </div>
     </div>
-  </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+    <h2>news</h2>
+    <p>• [2026.01] One paper accepted by CVPR 2026!</p>
+
 </body>
 </html>
