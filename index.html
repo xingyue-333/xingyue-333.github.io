@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Taoping Liu — 个人主页</title>
+  <meta name="description" content="陶平柳的个人主页 — 项目、博客与联系" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">陶平柳</a>
+      <nav class="nav">
+        <a href="#about">关于</a>
+        <a href="#projects">项目</a>
+        <a href="#contact">联系</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <img class="avatar" src="assets/avatar-placeholder.png" alt="头像（替换为你的照片）" />
+        <div class="hero-text">
+          <h1>你好，我是 陶平柳</h1>
+          <p class="lead">前端 / 全栈 / 热爱开源。这里展示我的项目、博客与联系方式。</p>
+          <p class="actions">
+            <a class="btn" href="#projects">我的项目</a>
+            <a class="btn btn-outline" href="#contact">联系我</a>
+          </p>
+          <p class="social">
+            <a href="https://github.com/xingyue-333" target="_blank" rel="noopener">GitHub</a> ·
+            <a href="#" target="_blank" rel="noopener">简历</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container section">
+      <h2>关于我</h2>
+      <p>一句话介绍你自己。可以写职业、擅长技术、当前关注领域等。例如：我是前端工程师，喜欢 React、Vite 与性能优化。</p>
+    </section>
+
+    <section id="projects" class="container section">
+      <h2>项目</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>项目名称 A</h3>
+          <p>项目简述，技术栈和亮点。</p>
+          <p><a href="#" target="_blank" rel="noopener">查看仓库</a></p>
+        </article>
+        <article class="card">
+          <h3>项目名称 B</h3>
+          <p>项目简述，技术栈和亮点。</p>
+          <p><a href="#" target="_blank" rel="noopener">查看仓库</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="container section">
+      <h2>联系</h2>
+      <p>邮箱：<a href="mailto:you@example.com">you@example.com</a></p>
+      <p>也可以在 <a href="https://github.com/xingyue-333" target="_blank" rel="noopener">GitHub</a> 找到我。</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> 陶平柳 · 基于 GitHub Pages 托管</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
